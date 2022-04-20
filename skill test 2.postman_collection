@@ -1,0 +1,889 @@
+{
+	"info": {
+		"_postman_id": "7c82755e-6051-4214-987c-262ccac05675",
+		"name": "skill test 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Allyvio Y\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n    \"phone\": \"0821672628276\",\n    \"gender\": \"laki-laki\",\n    \"email\": \"vioall@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n    \"phone\": \"082164028264\",\n    \"gender\": \"laki-laki\",\n    \"email\": \"ghanyersa24@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "382"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17e-XmA45SenC/U0MeOQYTU08/eSuQE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:00:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Berhasil daftar\",\n    \"data\": {\n        \"id\": \"3f019ae9-50cd-4f69-a43d-34bf3007f78e\",\n        \"name\": \"Ghany AE\",\n        \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n        \"phone\": \"082164028264\",\n        \"gender\": \"laki-laki\",\n        \"email\": \"ghanyersa24@gmail.com\",\n        \"password\": \"$2b$10$oc/OHXiWEk6I5hfwVCZ2IeGr3eVyTMta7oVCd5zoXQoBxwEQK7iJm\",\n        \"updatedAt\": \"2021-09-10T18:00:03.400Z\",\n        \"createdAt\": \"2021-09-10T18:00:03.400Z\"\n    }\n}"
+				},
+				{
+					"name": "validasi nama",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-m2kddXs2Hy5vq6yL0ICunhRX890\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:00:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"nama tidak boleh kosong\"\n}"
+				},
+				{
+					"name": "validasi alamat",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-EasvyxfugLUu+gCAstbTPZqBI8E\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:00:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"alamat tidak boleh kosong\"\n}"
+				},
+				{
+					"name": "validasi no telp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-eFXzAa+NHjkB+pB+JQJ5jLyZLFg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:01:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"no telp wajib diisi\"\n}"
+				},
+				{
+					"name": "validasi jenis kelamin 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n    \"phone\": \"082164028264\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-UTVM2zkPVlkHxNlUDMPSmPPKGp0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:01:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"jenis kelamin wajib diisi\"\n}"
+				},
+				{
+					"name": "validasi jenis kelamin 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n    \"phone\": \"082164028264\",\n    \"gender\": \"laki-laki2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"24-xFAexqbdFdg2uMCEobP2dfv5Rhc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:01:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"jenis kelamin tidak sesuai\"\n}"
+				},
+				{
+					"name": "validasi email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n    \"phone\": \"082164028264\",\n    \"gender\": \"laki-laki\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-sS+I3VrADl0uTKJQot7SSF44j0k\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:02:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"alamat email tidak boleh kosong\"\n}"
+				},
+				{
+					"name": "validasi password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ghany AE\",\n    \"address\": \"Perumahan Timah CC V no. 47 Cimanggis - Depok\",\n    \"phone\": \"082164028264\",\n    \"gender\": \"laki-laki\",\n    \"email\": \"ghanyersa24@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-PmdBybfAP5Q4mP8lVjZh2yw9GXQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:02:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"password tidak boleh kosong\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ghanyersa24@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "validasi email & password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-fVWrFANH8j4dbAUhRdIAEQlgKWk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:03:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"email dan password tidak boleh kosong\"\n}"
+				},
+				{
+					"name": "tidak cocok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ghanyersa24@gmail.com\",\n    \"password\": \"pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-33SmJCgS1XkguaNEu4QDtxNXpow\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:07:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"email dan password tidak cocok\"\n}"
+				},
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ghanyersa24@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "614"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"266-moya/Pffxk/KbO9gOz/1BqY/qKo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:14:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"email dan password cocok\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmMDE5YWU5LTUwY2QtNGY2OS1hNDNkLTM0YmYzMDA3Zjc4ZSIsIm5hbWUiOiJHaGFueSBBRSIsImFkZHJlc3MiOiJQZXJ1bWFoYW4gVGltYWggQ0MgViBuby4gNDcgQ2ltYW5nZ2lzIC0gRGVwb2siLCJwaG9uZSI6IjA4MjE2NDAyODI2NCIsImdlbmRlciI6Imxha2ktbGFraSIsImVtYWlsIjoiZ2hhbnllcnNhMjRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkb2MvT0hYaVdFazZJNWhmd1ZDWjJJZUdyM2VWeVRNdGE3b1ZDZDV6b1hRb0J4d0VRSzdpSm0iLCJjcmVhdGVkQXQiOiIyMDIxLTA5LTEwVDE4OjAwOjAzLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTA5LTEwVDE4OjAwOjAzLjAwMFoiLCJpYXQiOjE2MzEyOTc2NjV9.ssQa7vy9Q6PSCkYcicnq4-YVwQCPqLrBoWodp90KiEU\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmMDE5YWU5LTUwY2QtNGY2OS1hNDNkLTM0YmYzMDA3Zjc4ZSIsIm5hbWUiOiJHaGFueSBBRSIsImFkZHJlc3MiOiJQZXJ1bWFoYW4gVGltYWggQ0MgViBuby4gNDcgQ2ltYW5nZ2lzIC0gRGVwb2siLCJwaG9uZSI6IjA4MjE2NDAyODI2NCIsImdlbmRlciI6Imxha2ktbGFraSIsImVtYWlsIjoiZ2hhbnllcnNhMjRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkb2MvT0hYaVdFazZJNWhmd1ZDWjJJZUdyM2VWeVRNdGE3b1ZDZDV6b1hRb0J4d0VRSzdpSm0iLCJjcmVhdGVkQXQiOiIyMDIxLTA5LTEwVDE4OjAwOjAzLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTA5LTEwVDE4OjAwOjAzLjAwMFoiLCJpYXQiOjE2MzEyOTc2NjV9.ssQa7vy9Q6PSCkYcicnq4-YVwQCPqLrBoWodp90KiEU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "unauthorize",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JEJEJEJEJ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-Z1GvR7nr5rfBXc17JnwYkAnYdfk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:22:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"unauthorize\"\n}"
+				},
+				{
+					"name": "list users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNmMDE5YWU5LTUwY2QtNGY2OS1hNDNkLTM0YmYzMDA3Zjc4ZSIsIm5hbWUiOiJHaGFueSBBRSIsImFkZHJlc3MiOiJQZXJ1bWFoYW4gVGltYWggQ0MgViBuby4gNDcgQ2ltYW5nZ2lzIC0gRGVwb2siLCJwaG9uZSI6IjA4MjE2NDAyODI2NCIsImdlbmRlciI6Imxha2ktbGFraSIsImVtYWlsIjoiZ2hhbnllcnNhMjRAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkb2MvT0hYaVdFazZJNWhmd1ZDWjJJZUdyM2VWeVRNdGE3b1ZDZDV6b1hRb0J4d0VRSzdpSm0iLCJjcmVhdGVkQXQiOiIyMDIxLTA5LTEwVDE4OjAwOjAzLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTA5LTEwVDE4OjAwOjAzLjAwMFoiLCJpYXQiOjE2MzEyOTc2NjV9.ssQa7vy9Q6PSCkYcicnq4-YVwQCPqLrBoWodp90KiEU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "159"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9f-hiFKSJlPSsb0uPOs+AVvySMgMJ8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 10 Sep 2021 18:26:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"data users\",\n    \"data\": [\n        {\n            \"name\": \"Ghany AE\",\n            \"gender\": \"laki-laki\",\n            \"phone\": \"082164028264\"\n        },\n        {\n            \"name\": \"Allyvio Y\",\n            \"gender\": \"laki-laki\",\n            \"phone\": \"0821672628276\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
